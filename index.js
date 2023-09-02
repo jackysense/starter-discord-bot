@@ -56,6 +56,7 @@ app.post("/interactions", verifyKeyMiddleware(PUBLIC_KEY), async (req, res) => {
         console.log(res.data);
       } catch (e) {
         console.log(e);
+        console.log(e);
       }
 
       return res.send({
