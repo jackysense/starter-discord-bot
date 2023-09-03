@@ -11,6 +11,7 @@ const {
   InteractionType,
   InteractionResponseType,
   MessageComponentTypes,
+  ButtonStyleTypes,
   verifyKeyMiddleware,
 } = require("discord-interactions");
 
