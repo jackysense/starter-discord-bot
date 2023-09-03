@@ -72,10 +72,20 @@ app.post("/interactions", verifyKeyMiddleware(PUBLIC_KEY), async (req, res) => {
               components: [
                 {
                   type: MessageComponentTypes.BUTTON,
-                  // Value for your app to identify the button
-                  // custom_id: "my_button",
                   label: "open passkeys",
                   url: "https://example.hanko.io",
+                  style: ButtonStyleTypes.LINK,
+                },
+              ],
+            },
+            {
+              type: MessageComponentTypes.ACTION_ROW,
+              components: [
+                {
+                  type: MessageComponentTypes.BUTTON,
+
+                  label: "browser-suppor",
+                  url: "https://webauthn.me/browser-support",
                   style: ButtonStyleTypes.LINK,
                 },
               ],
