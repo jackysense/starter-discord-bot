@@ -73,15 +73,37 @@ app.post("/interactions", verifyKeyMiddleware(PUBLIC_KEY), async (req, res) => {
                 {
                   type: MessageComponentTypes.BUTTON,
                   // Value for your app to identify the button
-                  url: "https://example.hanko.io",
+                  custom_id: "my_button",
                   label: "Click",
-                  style: ButtonStyleTypes.Link,
+                  style: ButtonStyleTypes.PRIMARY,
                 },
               ],
             },
           ],
         },
       });
+
+      // return res.send({
+      //   type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
+      //   data: {
+      //     content: "A message with a button",
+      //     // Buttons are inside of action rows
+      //     components: [
+      //       {
+      //         type: MessageComponentTypes.ACTION_ROW,
+      //         components: [
+      //           {
+      //             type: MessageComponentTypes.BUTTON,
+      //             // Value for your app to identify the button
+      //             url: "https://example.hanko.io",
+      //             label: "Click",
+      //             style: ButtonStyleTypes.Link,
+      //           },
+      //         ],
+      //       },
+      //     ],
+      //   },
+      // });
 
       // return res.send({
       //   // https://discord.com/developers/docs/interactions/receiving-and-responding#responding-to-an-interaction
