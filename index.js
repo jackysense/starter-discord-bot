@@ -10,6 +10,7 @@ const express = require("express");
 const {
   InteractionType,
   InteractionResponseType,
+  MessageComponentTypes,
   verifyKeyMiddleware,
 } = require("discord-interactions");
 
