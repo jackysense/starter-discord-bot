@@ -73,9 +73,10 @@ app.post("/interactions", verifyKeyMiddleware(PUBLIC_KEY), async (req, res) => {
                 {
                   type: MessageComponentTypes.BUTTON,
                   // Value for your app to identify the button
-                  custom_id: "my_button",
+                  // custom_id: "my_button",
                   label: "Click",
-                  style: ButtonStyleTypes.PRIMARY,
+                  url: "https://example.hanko.io",
+                  style: ButtonStyleTypes.LINK,
                 },
               ],
             },
