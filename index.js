@@ -64,7 +64,7 @@ app.post("/interactions", verifyKeyMiddleware(PUBLIC_KEY), async (req, res) => {
       return res.send({
         type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
         data: {
-          content: "A message with a button",
+          content: "passkeys test",
           // Buttons are inside of action rows
           components: [
             {
@@ -74,7 +74,7 @@ app.post("/interactions", verifyKeyMiddleware(PUBLIC_KEY), async (req, res) => {
                   type: MessageComponentTypes.BUTTON,
                   // Value for your app to identify the button
                   // custom_id: "my_button",
-                  label: "Click",
+                  label: "open passkeys",
                   url: "https://example.hanko.io",
                   style: ButtonStyleTypes.LINK,
                 },
